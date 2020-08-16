@@ -1,2 +1,2 @@
 # defaultcss
-Theme for Windows 93 that makes it look more accurate
+Windows 2000 theme for Windows 93
