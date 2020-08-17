@@ -12,9 +12,46 @@
 }
 */
 
-.ui_window__body:not(.ui_terminal), .ui_window__buttons, .ui_window{
-    background-color: #d4d0c8;
+#s42_background{
+    background: linear-gradient(135deg,#d017d0 0,#01ecec 100%);
 }
+/*.ui_explorer__nav__input{
+    border-top: 1px solid gray !important;
+    border-left: 1px solid gray !important;
+    border-right: 1px solid #dfdfdf !important;
+    border-bottom: 1px solid #dfdfdf !important;
+}
+.ui_explorer__nav__home{
+    padding-right: 1px !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+.ui_explorer__nav__home:before{
+    content:"Address";
+    border: none !important;
+    box-shadow: none !important;
+}
+.ui_explorer__nav__home > img{
+    display: none !important;
+}
+.ui_explorer__nav__go{
+  
+}*/
+.ui_explorer--local > .ui_icon__folder:not(._ui_icon__lnk42) > img{
+    content: url("https://win98icons.alexmeub.com/icons/png/directory_closed-3.png")
+}
+
+.ui_window--active .ui_window__head{
+        background: linear-gradient(135deg,#e600e6 0,#00e3e3 100%);
+}
+/*
+.ui_window__body:not(.ui_terminal), .ui_window__buttons, .ui_window{
+    background-color: #c0c0c0;
+}
+.ui_window__body{
+    overflow: hidden !important;
+}
+
 .ui_window_docked{
         border: 1px solid red;
     border-bottom-color: #7f7f7f !important;
@@ -23,6 +60,7 @@
     border-left-color: white;
     box-shadow: 1px 1px 0px #404040, -1px -1px 0px #d4d0c8 !important;
 }
+
 #s42_taskbar{
     background-color: #d4d0c8 !important;
   border: 1px solid red;
@@ -32,13 +70,14 @@
     border-left-color: white;
     box-shadow: 1px 1px 0px #404040, -1px -1px 0px #d4d0c8 !important;
 }
+
 code{
         font-family: "px_sans_nouveaux", monospace !important;
-}
+}*/
 
-.ui_icon > span{
+/*.ui_icon > span{
     text-shadow: none !important;
-}
+}*/
 .ui_window{
     padding: 1px !important;
     border: 1px solid red;
@@ -46,12 +85,13 @@ code{
     border-right-color: #7f7f7f !important;
     border-top-color: white;
     border-left-color: white;
-    box-shadow: 1px 1px 0px #404040, -1px -1px 0px #d4d0c8 !important;
+    box-shadow: 1px 1px 0px #000, -1px -1px 0px #dfdfdf !important;
+    
 }
 {
     
 }
-.ui_menu:not(.ui_menu--bar), .ui_menu--open{
+/*.ui_menu:not(.ui_menu--bar), .ui_menu--open{
     background-color: #d4d0c8 !important;
     border: 1px solid red;
     border-bottom-color: #7f7f7f !important;
@@ -59,19 +99,32 @@ code{
     border-top-color: white !important;
     border-left-color: white !important;
     box-shadow: 1px 1px 0px #404040, -1px -1px 0px #d4d0c8 !important;
-}
+}*
 ul{
     box-shadow: none !important;
     border: none !important;
-}
-button{
-    border: 1px solid red;
-    border-top-color: white !important;
-    border-left-color: white !important;
+}/
+buctcton{
+    border: none !important;
+    padding: 2px !important;
+  /*  border-top-color: #dfdfdf !important;
+    border-left-color: #dfdfdf !important;
     border-bottom-color: #7f7f7f;
-    border-right-color: #7f7f7f;
-    box-shadow: 1px 1px #404040 !important;
-    background-color: #d4d0c8 !important;
+    border-right-color: #7f7f7f; */
+   /* box-shadow: 1px 1px #404040, -1px -1px #fff !important;
+    box-shadow: 0 1px 0 0 black, 0 -1px 0 0 #ffffff, -1px 0 0 0 #ffffff, -1px 0 0 0 black, 1px 0 0 0 black !important;
+        box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf !important;
+    background-color: #c0c0c0 !important;
+} 
+.button:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 30px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 5px solid #ffea00;
 }
 /*button:focus{
    padding: 2px !important; 
@@ -96,6 +149,7 @@ min-width: 68px !important;
 
 
 /* CODE FROM ZIAD */
+
 .ui_window__head__close,
 .ui_window__head__config,
 .ui_window__head__help,
@@ -107,16 +161,16 @@ min-width: 68px !important;
 	margin: 0;
 	font-family: px_icons;
 	font-size: 8px;
-	width: 16px;
+	width: 15px;
 	height: 14px;
 	line-height: 14px!important;
 	margin-left: 1px !important;
 	text-align: center;
-	padding: 0;
-	padding-bottom: 1px;
+	padding-bottom: 5px !important;
 	position: relative
         
 }
+
 
 .ui_window__head__close, .ui_window__head__help {
 	margin-left: 2px !important;
@@ -157,13 +211,13 @@ min-width: 68px !important;
 .ui_window__head__close {
 	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='8' height='7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0h2v1h1v1h2V1h1V0h2v1H7v1H6v1H5v1h1v1h1v1h1v1H6V6H5V5H3v1H2v1H0V6h1V5h1V4h1V3H2V2H1V1H0V0z' fill='%23000'/%3E%3C/svg%3E");
 	background-repeat: no-repeat;
-	background-position: top 2.5px left 3px
+	background-position: top 3px left 3px
 }
 
 .ui_window__head__maximize {
 	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='9' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9 0H0v9h9V0zM8 2H1v6h7V2z' fill='%23000'/%3E%3C/svg%3E");
 	background-repeat: no-repeat;
-	background-position: top 2px left 3px
+	background-position: top 2px left 2px
 }
 
 .ui_window__head__maximized {
@@ -175,7 +229,7 @@ min-width: 68px !important;
 .ui_window__head__minimize {
 	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='6' height='2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M0 0h6v2H0z'/%3E%3C/svg%3E");
 	background-repeat: no-repeat;
-	background-position: bottom 2px left 3px
+	background-position: bottom 1px left 4px
 }
 
 .ui_window__head__help {
@@ -195,7 +249,7 @@ min-width: 68px !important;
 .ui_window__head__reload:before {
 	content: "P"
 }
-
+/*
 .ui_window--active .ui_window__head {
 	background: linear-gradient(90deg, #233f7f 0, #a6caf0 100%)
 }
@@ -203,7 +257,7 @@ min-width: 68px !important;
 .skin_background {
 	background: #3a6ea5
 }
-
+*/
 .ui_window__head {
 	color: #fff;
 	padding-top: 2px;
