@@ -1,154 +1,58 @@
-/*@font-face {
-    font-family: "Pixelated MS Sans Serif";
-    src: url("https://unpkg.com/98.css@0.1.16/dist/ms_sans_serif.woff") format("woff");
-    src: url("https://unpkg.com/98.css@0.1.16/dist/ms_sans_serif.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal
-}
+/* DEFAULTCSS v3 */
+/* MADE BY LITEVX */
+/* Any unwanted changes can be commented out */
 
-*{
-    font-family: "Pixelated MS Sans Serif", sans-serif !important;
-    font-size: 11px !important;
-}
-*/
-
+/* -- Slightly desaturated gradient to decrease eye strain (major problem with windows93 on a lot of displays) -- */
 #s42_background{
     background: linear-gradient(135deg,#d017d0 0,#01ecec 100%);
-}
-/*.ui_explorer__nav__input{
-    border-top: 1px solid gray !important;
-    border-left: 1px solid gray !important;
-    border-right: 1px solid #dfdfdf !important;
-    border-bottom: 1px solid #dfdfdf !important;
-}
-.ui_explorer__nav__home{
-    padding-right: 1px !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-.ui_explorer__nav__home:before{
-    content:"Address";
-    border: none !important;
-    box-shadow: none !important;
-}
-.ui_explorer__nav__home > img{
-    display: none !important;
-}
-.ui_explorer__nav__go{
-  
-}*/
-.ui_explorer--local > .ui_icon__folder:not(._ui_icon__lnk42) > img{
-    content: url("https://win98icons.alexmeub.com/icons/png/directory_closed-3.png")
 }
 
 .ui_window--active .ui_window__head{
         background: linear-gradient(135deg,#e600e6 0,#00e3e3 100%);
 }
-/*
-.ui_window__body:not(.ui_terminal), .ui_window__buttons, .ui_window{
-    background-color: #c0c0c0;
+
+/* -- Position alert text to the left side, matching Windows 98 -- */
+.ui_alert__text{
+    text-align: left;
+    margin-left: 55px !important;
 }
+
+.ui_alert__img{
+    margin-left: 7px !important;
+}
+
 .ui_window__body{
     overflow: hidden !important;
 }
 
-.ui_window_docked{
-        border: 1px solid red;
-    border-bottom-color: #7f7f7f !important;
-    border-right-color: #7f7f7f !important;
-    border-top-color: white;
-    border-left-color: white;
-    box-shadow: 1px 1px 0px #404040, -1px -1px 0px #d4d0c8 !important;
+/* -- Adds proper black outline to focused buttons, matching Windows 98 -- */
+button:focus{
+    outline: none !important;
+    color: #000 !important;
+    border-top: 1px solid #000 !important;
+    border-left: 1px solid #000 !important;
+    border-right: 1px solid #000 !important;
+    border-bottom: 1px solid #000 !important;
+    box-shadow: inset 1px 1px #fff, inset 2px 2px #dfdfdf, inset -1px -1px #808080,  1px 0 #000, 0 1px #000, 1px 1px #000 !important;
 }
 
-#s42_taskbar{
-    background-color: #d4d0c8 !important;
-  border: 1px solid red;
-    border-bottom-color: #7f7f7f !important;
-    border-right-color: #7f7f7f !important;
-    border-top-color: white;
-    border-left-color: white;
-    box-shadow: 1px 1px 0px #404040, -1px -1px 0px #d4d0c8 !important;
+/* -- Makes menu more like Windows 98 -- */
+.ui_menu--open > ul{
+    border-top: 1px solid #dfdfdf !important;
+    border-left: 1px solid #dfdfdf !important;
+    box-shadow: inset 1px 1px #fff, 1px 0 #000, 0 1px #000, 1px 1px #000 !important;
 }
 
-code{
-        font-family: "px_sans_nouveaux", monospace !important;
-}*/
 
-/*.ui_icon > span{
-    text-shadow: none !important;
-}*/
+/* -- Makes window more like Windows 98 -- */
 .ui_window{
-    padding: 1px !important;
-    border: 1px solid red;
-    border-bottom-color: #7f7f7f !important;
-    border-right-color: #7f7f7f !important;
-    border-top-color: white;
-    border-left-color: white;
-    box-shadow: 1px 1px 0px #000, -1px -1px 0px #dfdfdf !important;
-    
-}
-{
-    
-}
-/*.ui_menu:not(.ui_menu--bar), .ui_menu--open{
-    background-color: #d4d0c8 !important;
-    border: 1px solid red;
-    border-bottom-color: #7f7f7f !important;
-    border-right-color: #7f7f7f !important;
-    border-top-color: white !important;
-    border-left-color: white !important;
-    box-shadow: 1px 1px 0px #404040, -1px -1px 0px #d4d0c8 !important;
-}*
-ul{
-    box-shadow: none !important;
-    border: none !important;
-}/
-buctcton{
-    border: none !important;
     padding: 2px !important;
-  /*  border-top-color: #dfdfdf !important;
-    border-left-color: #dfdfdf !important;
-    border-bottom-color: #7f7f7f;
-    border-right-color: #7f7f7f; */
-   /* box-shadow: 1px 1px #404040, -1px -1px #fff !important;
-    box-shadow: 0 1px 0 0 black, 0 -1px 0 0 #ffffff, -1px 0 0 0 #ffffff, -1px 0 0 0 black, 1px 0 0 0 black !important;
-        box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf !important;
-    background-color: #c0c0c0 !important;
-} 
-.button:before {
-  content: " ";
-  position: absolute;
-  z-index: -1;
-  top: 30px;
-  left: 5px;
-  right: 5px;
-  bottom: 5px;
-  border: 5px solid #ffea00;
+    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf;   
 }
-/*button:focus{
-   padding: 2px !important; 
-min-width: 68px !important;
-    max-height: 18 !important;
 
- outline: 1px solid black !important;
-    outline-offset: 0 !important;
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* CODE FROM ZIAD */
+/* -- Window Buttons -- */
+/* -- Credit: ziad87 -- */
 
 .ui_window__head__close,
 .ui_window__head__config,
@@ -167,10 +71,12 @@ min-width: 68px !important;
 	margin-left: 1px !important;
 	text-align: center;
 	padding-bottom: 5px !important;
-	position: relative
-        
+	position: relative;
 }
 
+.ui_window__head__close{
+    margin-right: 1px !important;
+}
 
 .ui_window__head__close, .ui_window__head__help {
 	margin-left: 2px !important;
@@ -197,7 +103,7 @@ min-width: 68px !important;
 .ui_window__head__reload:before {
 	position: absolute;
 	top: 0;
-	left: 0
+	left: 0;
 }
 
 .ui_window__head__close:before,
@@ -235,7 +141,7 @@ min-width: 68px !important;
 .ui_window__head__help {
 	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='6' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M0 1h2v2H0zM1 0h4v1H1zM4 1h2v2H4zM3 3h2v1H3zM2 4h2v2H2zM2 7h2v2H2z'/%3E%3C/svg%3E");
 	background-repeat: no-repeat;
-	background-position: top 2px left 5px
+	background-position: top 2px left 4px
 }
 
 .ui_window__head__pin:before {
@@ -249,15 +155,7 @@ min-width: 68px !important;
 .ui_window__head__reload:before {
 	content: "P"
 }
-/*
-.ui_window--active .ui_window__head {
-	background: linear-gradient(90deg, #233f7f 0, #a6caf0 100%)
-}
 
-.skin_background {
-	background: #3a6ea5
-}
-*/
 .ui_window__head {
 	color: #fff;
 	padding-top: 2px;
@@ -265,5 +163,11 @@ min-width: 68px !important;
 	padding-left: 2px;
 	padding-bottom: 1px;
 	margin-bottom: 2px;
-	background-image: linear-gradient(to left, silver 0, grey 100%)
+    margin-left: 1px !important;;
+    margin-top: 1px !important;
 }
+
+/* -- Windows 98 Folder Icon [disabled] -- */
+/* .ui_explorer--local > .ui_icon__folder:not(._ui_icon__lnk42) > img{
+   content: url("https://win98icons.alexmeub.com/icons/png/directory_closed-3.png")
+} */
