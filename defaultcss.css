@@ -11,6 +11,8 @@
         background: linear-gradient(135deg,#e600e6 0,#00e3e3 100%);
 }
 
+
+
 /* -- Position alert text to the left side, matching Windows 98 -- */
 .ui_alert__text{
     text-align: left;
@@ -21,12 +23,12 @@
     margin-left: 7px !important;
 }
 
-.ui_window__body{
+.ui_window__body:not(.ui_terminal){
     overflow: hidden !important;
 }
 
 /* -- Adds proper black outline to focused buttons, matching Windows 98 -- */
-button:focus{
+.ui_window--active > footer > div > button.ui_window__ok:not(:active){
     outline: none !important;
     color: #000 !important;
     border-top: 1px solid #000 !important;
@@ -36,6 +38,9 @@ button:focus{
     box-shadow: inset 1px 1px #fff, inset 2px 2px #dfdfdf, inset -1px -1px #808080,  1px 0 #000, 0 1px #000, 1px 1px #000 !important;
 }
 
+button:active{
+    outline: none !important;
+}
 /* -- Makes menu more like Windows 98 -- */
 .ui_menu--open > ul{
     border-top: 1px solid #dfdfdf !important;
@@ -167,7 +172,69 @@ button:focus{
     margin-top: 1px !important;
 }
 
+/* -- Windows 98 Scrollbar -- */
+/* -- CREDITS: DAKEDRES    -- */
+/* dakedres was here ;3 */
+body *::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+  background: none;
+}
+
+body *::-webkit-scrollbar-thumb, body *::-webkit-scrollbar-button {
+  width: 16px;
+  height: 16px;
+  background: silver;
+  box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px gray;
+  border: 1px solid;
+  border-color: silver #000 #000 silver;
+}
+
+body *::-webkit-scrollbar-track {
+  image-rendering: optimizeSpeed;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTAuNSAyIDIiIHNoYXBlLXJlbmRlcmluZz0iY3Jpc3BFZGdlcyI+CjxtZXRhZGF0YT5NYWRlIHdpdGggUGl4ZWxzIHRvIFN2ZyBodHRwczovL2NvZGVwZW4uaW8vc2hzaGF3L3Blbi9YYnh2Tmo8L21ldGFkYXRhPgo8cGF0aCBzdHJva2U9IiNjMGMwYzAiIGQ9Ik0wIDBoMU0xIDFoMSIgLz4KPC9zdmc+");
+  background-position: 0 0;
+  background-repeat: repeat;
+  background-size: 2px;
+}
+
+body *::-webkit-scrollbar-button {
+  background-repeat: no-repeat;
+  background-size: 16px;
+}
+
+body *::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTAuNSAxNiAxNiIgc2hhcGUtcmVuZGVyaW5nPSJjcmlzcEVkZ2VzIj4KPG1ldGFkYXRhPk1hZGUgd2l0aCBQaXhlbHMgdG8gU3ZnIGh0dHBzOi8vY29kZXBlbi5pby9zaHNoYXcvcGVuL1hieHZOajwvbWV0YWRhdGE+CjxwYXRoIHN0cm9rZT0iIzAwMDAwMCIgZD0iTTcgNWgxTTYgNmgzTTUgN2g1TTQgOGg3IiAvPgo8L3N2Zz4=");
+}
+
+body *::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTAuNSAxNiAxNiIgc2hhcGUtcmVuZGVyaW5nPSJjcmlzcEVkZ2VzIj4KPG1ldGFkYXRhPk1hZGUgd2l0aCBQaXhlbHMgdG8gU3ZnIGh0dHBzOi8vY29kZXBlbi5pby9zaHNoYXcvcGVuL1hieHZOajwvbWV0YWRhdGE+CjxwYXRoIHN0cm9rZT0iIzAwMDAwMCIgZD0iTTQgNWg3TTUgNmg1TTYgN2gzTTcgOGgxIiAvPgo8L3N2Zz4=");
+}
+
+body *::-webkit-scrollbar-button:single-button:horizontal:decrement {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTAuNSAxNiAxNiIgc2hhcGUtcmVuZGVyaW5nPSJjcmlzcEVkZ2VzIj4KPG1ldGFkYXRhPk1hZGUgd2l0aCBQaXhlbHMgdG8gU3ZnIGh0dHBzOi8vY29kZXBlbi5pby9zaHNoYXcvcGVuL1hieHZOajwvbWV0YWRhdGE+CjxwYXRoIHN0cm9rZT0iIzAwMDAwMCIgZD0iTTggM2gxTTcgNGgyTTYgNWgzTTUgNmg0TTYgN2gzTTcgOGgyTTggOWgxIiAvPgo8L3N2Zz4=");
+}
+
+body *::-webkit-scrollbar-button:single-button:horizontal:increment {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTAuNSAxNiAxNiIgc2hhcGUtcmVuZGVyaW5nPSJjcmlzcEVkZ2VzIj4KPG1ldGFkYXRhPk1hZGUgd2l0aCBQaXhlbHMgdG8gU3ZnIGh0dHBzOi8vY29kZXBlbi5pby9zaHNoYXcvcGVuL1hieHZOajwvbWV0YWRhdGE+CjxwYXRoIHN0cm9rZT0iIzAwMDAwMCIgZD0iTTYgM2gxTTYgNGgyTTYgNWgzTTYgNmg0TTYgN2gzTTYgOGgyTTYgOWgxIiAvPgo8L3N2Zz4=");
+}
+
+body *::-webkit-scrollbar-corner {
+  background: silver;
+}
+
+
+
+
 /* -- Windows 98 Folder Icon [disabled] -- */
 /* .ui_explorer--local > .ui_icon__folder:not(._ui_icon__lnk42) > img{
    content: url("https://win98icons.alexmeub.com/icons/png/directory_closed-3.png")
 } */
+/* -- Sharper alert body text using G80.M3U trick -- */
+/* -- CHANGES COLOR ANYTHING INSIDE OF .ui_alert__text INCLUDING TEXT BOXES -- */
+/* -- DISABLED -- */ /*
+.ui_alert__text, .ui_form__field label{
+    color: rgb(0, 0, 0);
+    text-shadow: #c0c0c0 -1px -1px 0px, #c0c0c0 1px -1px 0px, #c0c0c0 -1px 1px 0px, #c0c0c0 1px 1px 0px;
+    filter: contrast(4) brightness(0.756);
+}  */
