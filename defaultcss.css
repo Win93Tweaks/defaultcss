@@ -1,17 +1,124 @@
-/* DEFAULTCSS v4 */
-/* MADE BY LITEVX */
+/* DefaultCSS v5 */
+/* Made by litevx, with code from ziad87 and dakedres */
 /* Any unwanted changes can be commented out */
 
 /* -- Slightly desaturated gradient to decrease eye strain (major problem with windows93 on a lot of displays) -- */
 #s42_background{
-    background: linear-gradient(135deg,#d017d0 0,#01ecec 100%);
+/*    background: linear-gradient(135deg,#d017d0 0,#01ecec 100%);*/
+       background: url("https://cdn.discordapp.com/attachments/699354946050457730/749316376161812500/unknown.png"), linear-gradient(135deg,#d017d0 0,#01ecec 100%);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center; 
 }
 
 .ui_window--active .ui_window__head{
         background: linear-gradient(135deg,#e600e6 0,#00e3e3 100%);
 }
 
+/* -- Remove dragging cursor from Windows title bar hover, and set proper cursor during dragging-- */
+.ui_window__head > .ui_window--draggable{
+    cursor: inherit !important;
+}
 
+.ui_is_dragging *{
+   cursor: url(/c/sys/cursors/drag.cur),move;
+}
+
+/* -- Grid apps list -- */
+
+/*.ui_menu--scroller.ui_menu--scroller--active{
+    right: 1045px !important;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+}*/
+
+#ui_menu_3 .ui_menu__submenu{
+
+}
+#ui_menu_3 .ui_menu__submenu ul{
+columns: 13;
+width:  780px !important;
+height: 100% !important;
+padding-right: 8px !important;
+}
+#ui_menu_3 .ui_menu__submenu li{
+    margin: 0 !important;
+    padding: 0 !important;
+display: inline-block !important;
+
+width: 61px !important;
+height: 55px !important;
+min-width: 0 !important;
+max-width: none !important;
+min-height: 0 !important;
+text-align: center !important;
+}
+.startmenu_cmd{
+    display: none !important;
+}
+#ui_menu_3 .ui_menu__submenu li > .ui_menu__item__text{
+
+    flex: none !important;
+     display: block;
+    height: 14px !important;
+   
+  
+}
+#ui_menu_3 .ui_menu__submenu li img{
+    width: 32px !important;
+    height: 32px !important;
+    vertical-align: middle;
+    margin: 2px !important;
+}
+
+/* -- Better start menu and taskbar -- */
+    #s42_taskbar{
+    }
+    #ui_menu_3 > ul{
+        
+        margin-bottom: 3px !important;
+        padding: 1px !important;
+        padding-bottom: 2px !important;
+        /* --- /!\ FILEHOST WARNING: USES DISCORD CDN, IF ADDED TO OFFICIAL WIN93, PUT IMAGE ON SERVER INSTEAD /!\ --- */
+        background: url("https://cdn.discordapp.com/attachments/744570181342330951/748999911995080804/Frame_4.png") no-repeat 1% center;
+        background-color: silver !important;
+    }
+    .ui_menu__item--focus{
+        background: #0d80c8 !important;
+    }
+    #ui_menu_3 > ul > li:not(.ui_menu__separator){
+        min-height: 34px !important;
+    }
+    #ui_menu_3 > ul > .ui_menu__item--opener:after{
+        padding-top: 6px !important;
+        font-size: 10px !important;
+    }
+    #ui_menu_3 > ul > li{
+        margin-left: 25px !important;
+    }
+    #ui_menu_3 > ul > #ui_menu__item_26, #ui_menu_3 > ul > #ui_menu__item_20{
+        display: none !important;
+    }
+    #ui_menu_3 > ul > li:nth-child(9){
+        display: none !important;
+    }
+    #ui_menu_3 > ul > li > .ui_menu__item__ico > img{
+        width: 32px !important;
+        height: 32px !important;
+    }
+    #ui_menu_3 > ul > #ui_menu__item_24  > .ui_menu__item__ico > img{
+        width: 29px !important;
+        height: 29px !important;
+        padding-top: 2px !important;
+        padding-left: 2px !important;
+    }
+    #ui_menu_3 > ul > li >.ui_menu__item__text{
+        display: flex;
+        align-items: center;
+        margin-left: 16px !important;
+    }
 
 /* -- Position alert text to the left side, matching Windows 98 -- */
 .ui_alert__text{
@@ -22,6 +129,7 @@
 .ui_alert__img{
     margin-left: 7px !important;
 }
+
 
 .ui_window__body:not(.ui_terminal){
     overflow: hidden !important;
@@ -41,12 +149,7 @@
 button:active{
     outline: none !important;
 }
-/* -- Makes menu more like Windows 98 -- */
-.ui_menu--open > ul{
-    border-top: 1px solid #dfdfdf !important;
-    border-left: 1px solid #dfdfdf !important;
-    box-shadow: inset 1px 1px #fff, 1px 0 #000, 0 1px #000, 1px 1px #000 !important;
-}
+
 
 
 /* -- Makes window more like Windows 98 -- */
@@ -54,6 +157,13 @@ button:active{
     padding: 2px !important;
     border-top: 1px solid #dfdfdf;
     border-left: 1px solid #dfdfdf;   
+}
+
+/* -- Makes menu borders more like Windows 98 -- */
+ .ui_menu--open > ul{
+    border-top: 1px solid #dfdfdf !important;
+    border-left: 1px solid #dfdfdf !important;
+    box-shadow: inset 1px 1px #fff, 1px 0 #000, 0 1px #000, 1px 1px #000 !important;
 }
 
 /* -- Window Buttons -- */
@@ -223,7 +333,7 @@ body *::-webkit-scrollbar-corner {
   background: silver;
 }
 
-
+/* -- DISABLED CHANGES -- */
 
 
 /* -- Windows 98 Folder Icon [disabled] -- */
@@ -238,3 +348,11 @@ body *::-webkit-scrollbar-corner {
     text-shadow: #c0c0c0 -1px -1px 0px, #c0c0c0 1px -1px 0px, #c0c0c0 -1px 1px 0px, #c0c0c0 1px 1px 0px;
     filter: contrast(4) brightness(0.756);
 }  */
+
+/* Windows 94 beta wallpaper
+   background: url("https://media.discordapp.net/attachments/744570181342330951/748987515414773790/unknown.png"), linear-gradient(135deg,#d017d0 0,#01ecec 100%);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center; 
+*/
+
